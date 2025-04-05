@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Game</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div id="counter-display">Отсосал 0 раз(а)</div>
+        
+        <div id="video-container">
+            <video id="game-video" width="600" height="550" style="display: none;">
+                <source src="static/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <img id="game-image" width="600" height="550" style="display: none;">
+        </div>
+        
+        <div id="question-container" style="display: none;">
+            <div id="question-text">сосал?</div>
+            <div class="button-container">
+                <button id="yes-button">Да</button>
+                <button id="no-button">Нет</button>
+            </div>
+        </div>
+        
+        <div id="surprise-container" style="display: none;">
+            <button id="show-surprise-button">ПОКАЖИ ПРИЗ СКОРЕЕ</button>
+        </div>
+        
+        <button id="back-button" style="display: none;">Назад</button>
+    </div>
+
+    <script src="static/js/game.js"></script>
+</body>
+</html>

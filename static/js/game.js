@@ -75,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         questionContainer.style.display = 'flex';
     }
     
+    // Find this section in your code and update the image paths
     function yesAction() {
         counter++;
         counterDisplay.textContent = `Отсосал ${counter} раз`;
@@ -85,14 +86,16 @@ document.addEventListener('DOMContentLoaded', function() {
         backButton.style.display = 'block';
         
         if (counter === 1) {
-            imageElement.src = '/static/images/screenshot_5.png';
+            imageElement.src = 'static/images/screenshot_5.png'; // Updated path
             // Uncomment to show surprise button
             // surpriseContainer.style.display = 'flex';
         } else {
-            imageElement.src = '/static/images/screenshot_1.png';
+            imageElement.src = 'static/images/screenshot_1.png'; // Updated path
         }
         
-        // Update counter on server
+        // Update counter on server - this won't work on GitHub Pages
+        // You can remove this or replace with local storage
+        /*
         fetch('/update_counter', {
             method: 'POST',
             headers: {
@@ -100,18 +103,19 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             body: JSON.stringify({ counter: counter }),
         });
+        */
     }
     
     function noAction() {
         questionContainer.style.display = 'none';
         videoElement.style.display = 'none'; // Now hide the video
         imageElement.style.display = 'block';
-        imageElement.src = '/static/images/screenshot_2.png';
+        imageElement.src = 'static/images/screenshot_2.png'; // Updated path
         backButton.style.display = 'block';
     }
     
     function showSurprise() {
-        imageElement.src = '/static/images/screenshot_4.png';
+        imageElement.src = 'static/images/screenshot_4.png'; // Updated path
         surpriseContainer.style.display = 'none';
     }
     
